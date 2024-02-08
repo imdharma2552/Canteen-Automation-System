@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Product Form</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+        h1{
+            color: yellow;
+        }
+        body {
+            background: linear-gradient(135deg,yellow, red);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .containers {
+            margin: 70px auto;
+            margin-top: 120px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        .form-group {
+            align-items: center;
+            margin-bottom: 20px;
+            height: fit-content;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        .navbar {
+      text-align: right;
+        padding: 0.5em;
+    }
+    .navbar a{
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+        input[type="text"],
+        select {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        select {
+            background-color: white;
+            color: #333;
+        }
+
+        .btn-update {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-update:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/djqs7park/image/upload/v1696758497/logo_q6hmbl.jpg" class="food-munch-logo" />
+            </a>
+            <h1 style="font-size: 60px;font-family: 'Times New Roman', Times, serif;color: black;">Smart Canteen</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <b><a class="nav-link active" id="navItem1" href="/adminindex">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a></b>
+                    <b><a class="nav-link" href="/logout" id="navItem2">Log Out</a></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="containers">
+        <h1><b>Product Information</b></h1>
+        <form action='/remove-product' method="post">
+            <div class="form-group">
+                <label for="productName"><h3>Product Id:</h3></label>
+                <input type="text" id="productId" name="productId" placeholder="Enter product Id" required>
+            </div>
+
+         <button class="btn-update" type="submit">Remove</button>
+        </form>
+    </div>
+</body>
+</html>

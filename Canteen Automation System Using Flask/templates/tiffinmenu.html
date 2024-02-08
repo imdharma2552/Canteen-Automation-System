@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" type="text/css"  href="C:\Users\cool\Downloads\food_munch_upto_banner_section.css" /> -->
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+#navItem3 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+#navItem4 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+        body{
+             font-family: Arial, sans-serif;
+            background-color: lavender;
+            margin: 0;
+            padding: 0;
+        }
+        .heading{
+            text-align: center;
+            font-size: 24px;
+            margin-top: 10%;
+        }
+        .main{
+            font-family: Arial, sans-serif;
+            background-color: lavender;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll;
+            align-content: space-between;
+            justify-content: space-evenly;
+        }
+        .menu-item {
+            background-color: #fff;
+            padding: 10px;
+            margin: 30px 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 300px;
+        }
+
+        .menu-item img {
+            max-width: 300px;
+            max-height: 300px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+        p{
+            margin: 0;
+        }
+        .quantity-container {
+            display: flex;
+            align-items: end;
+            float: rigth;
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            margin-right: 100px;
+        }
+
+        .add-to-cart-form {
+            display: flex;
+            align-content: revert;
+            float: right;
+            margin-right: 13px;
+        }
+        .addcart{
+            background-color: green;
+            color: #fff;
+        }
+        .follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: orange;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/djqs7park/image/upload/v1696758497/logo_q6hmbl.jpg" class="food-munch-logo" />
+            </a>
+            <h1 style="font-size: 60px;font-family: 'Times New Roman', Times, serif;">Smart Canteen</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <b><a class="nav-link active" id="navItem1" href="/customer-index">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a></b>
+                    <b><a class="nav-link" href="/view_cart" id="navItem2">Cart</a></b>
+                    <b><a class="nav-link" href="/view_order" id="navItem3">Orders</a></b>
+                    <b><a class="nav-link" href="/logout" id="navItem4">Log Out</a></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="heading"><h1>Tiffin's</h1></div>
+    <div class="main">
+       {% for item in data %}
+       <div class="menu-item">
+            <img src="{{ item[0] }}" alt="{{ item[1] }}" height="200px" width="250px">
+            <h3>{{ item[1] }}</h3>
+            <p>Id : {{ item[2] }}</p>
+            <p>price : ₹{{ item[3] }}</p><br>
+            <form method="POST" action="/add-to-cart" class="add-to-cart-form">
+                <input type="hidden" name="item_id" value="{{ item[2] }}">
+                <input type="hidden" name="category" value="{{ item[4] }}">
+                <div class="quantity-container">
+                    <input type="number" name="quantity" class="quantity-input" value="1" min="1" required>
+                </div>
+                <button type="submit" class="addcart">Add to Cart</button>
+            </form>
+        </div>
+        {% endfor %}
+</body>
+</html>

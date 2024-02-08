@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<title>Canteen and Co</title>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.mowglistreetfood.com/wp-content/uploads/2023/01/Landing_image_Desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+  }
+
+
+  .header {
+    position: relative;
+    height: 20vh;
+    background: linear-gradient(to right, yellow, red);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+ .content button a{
+    text-decoration: none;
+    color: white;
+  }
+  .content {
+    text-align: center;
+    margin-top: 25%;
+  }
+
+  .content button {
+    font-size: 1.5em;
+    padding: 1% 2%;
+    margin: 1%;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .content button:hover {
+    background-color: #ff4500;
+    color: #fff;
+  }
+  .content a{
+    text-decoration: none;
+  }
+  .blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1;
+  }
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: orange;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}   
+  
+</style>
+</head>
+<body>
+  <div class="blur-background"></div>
+  
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/djqs7park/image/upload/v1696758497/logo_q6hmbl.jpg" class="food-munch-logo" />
+            </a>
+            <h1 style="font-size: 60px;font-family: 'Times New Roman', Times, serif;">Smart Canteen</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <b><a class="nav-link active" id="navItem1" href="/adminindex">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a></b>
+                    <b><a class="nav-link" href="/logout" id="navItem2">Log Out</a></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                      <div class="content d-flex flex-row justify-content-center">
+                        <button><a href='/admin-menu'>Menu</a></button>
+                        <button><a href='/form-add-products'>Add Item</a></button>
+                        <button><a href='/form-update-products'>Update Item</a></button>
+                        <button><a href='/form-remove-products'>Remove Item</a></button>
+                        <button><a href='/admin_view_order'>Order</a></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Product Form</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+        h1{
+            color: yellow;
+        }
+        body {
+            background: linear-gradient(135deg,yellow, red);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        .containers {
+            margin: 70px auto;
+            padding: 10px;
+            margin-top: 120px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 30%;
+        }
+
+        .form-group {
+            align-items: center;
+            margin-bottom: 5px;
+            height: fit-content;
+        }
+        .navbar {
+      text-align: right;
+        padding: 0.5em;
+    }
+    .navbar a{
+        color: white;
+        margin-right: 20px;
+        text-decoration: none;
+    }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        input[type="text"],
+        select {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+           
+        }
+
+        select {
+            background-color: white;
+            color: #333;
+
+        }
+
+        .btn-update {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .btn-update:hover {
+            background-color: red;
+        }
+        .follow-us-section {
+    background-color: white;
+}
+
+.follow-us-section-heading {
+    text-align: center;
+    color: #183b56;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.follow-us-icon-container {
+    background-color: #faf7e8;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin: 15px;
+    padding-top: 22px;
+    padding-bottom: 14px;
+    padding-right: 16px;
+    padding-left: 22px;
+}
+
+.icon {
+    color: orange;
+    font-size: 35px;
+}
+
+.footer-section {
+    background-color: #0d2436;
+}
+
+.footer-section-mail-id {
+    color: #959ead;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer-section-address {
+    color: #959ead;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/djqs7park/image/upload/v1696758497/logo_q6hmbl.jpg" class="food-munch-logo" />
+            </a>
+            <h1 style="font-size: 60px;font-family: 'Times New Roman', Times, serif;color: black;">Smart Canteen</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <b><a class="nav-link active" id="navItem1" href="/adminindex">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a></b>
+                    <b><a class="nav-link" href="/logout" id="navItem2">Log Out</a></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="containers">
+        <h1><b>Product Information</b></h1>
+        <form action='/add-products' method="post">
+            <div class="form-group">
+                <label for="productName"><h3>Product Id:</h3></label>
+                <input type="text" id="productId" name="productId" placeholder="Enter product Id" required>
+            </div>
+            <div class="form-group">
+                <label for="productName"><h3>Product Name:</h3></label>
+                <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+            </div>
+            <div class="form-group">
+                <label for="producturl"><h3>Product url:</h3></label>
+                <input type="text" id="producturl" name="producturl" placeholder="Enter product ImageUrl" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice"><h3>Price:</h3></label>
+                <input type="text" id="price" name="price" placeholder="Enter product price" required>
+            </div>
+            <div class="form-group">
+                <label for="category"><h3>Category:</h3></label>
+                <select id="category" name="category">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="tiffin">Tiffin</option>
+                    <option value="maincourse">Main Course</option>
+                    <option value="snack">Snack</option>
+                    <option value="jucie">Juice</option>
+                </select><br>
+            </div>
+            <div class="form-group">
+                <label for="Status"><h3>Status:</h3></label>
+                <select id="Status" name="Status">
+                    <option value="" disabled selected>Select Status</option>
+                    <option value="available">Available</option>
+                    <option value="notAvailable">Not Available</option>
+                </select><br>
+            </div>
+            <button class="btn-update" type="submit">Add Item</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canteen & Co Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="whole">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="adminlogin()">Admin</button>
+          <button type="button" class="toggle-btn" onclick="customerlogin()">Customer</button>
+        </div>
+        <h1 align="center">Login</h1>
+
+        <div>
+        <form class="input-group" id="adminlogin" action="/adminlogin" method="post">
+        <div class="txt_field">
+          <input type="text" class="input-field" name="login_id"required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="input-field" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <button type="submit" class="submit-btn">Log In</button> 
+        </form>
+      </div>
+      <div>
+        <form class="input-group" id="customerlogin" action="/customerlogin" method="post">
+        <div class="txt_field">
+          <input type="text" class="input-field" name="login_id" required>
+          <span></span>
+          <label>Username</label>
+        </div>
+        <div class="txt_field">
+          <input type="password" class="input-field" name="password" required>
+          <span></span>
+          <label>Password</label>
+        </div>
+        <button type="submit" class="submit-btn">Log In</button> 
+        </form>
+      </div>  
+      </div>
+    </div>
+    <script type="text/javascript">
+      var x=document.getElementById('adminlogin');
+      var y=document.getElementById('customerlogin');
+      var z=document.getElementById('btn');
+      function customerlogin(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+      }
+      function adminlogin(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0";
+      }
+    </script>
+  </body>
+</html>

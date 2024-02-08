@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>order Form</title>
+    <style>
+         @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.food-munch-logo {
+    width: 80px;
+    height: 70px;
+}
+
+#navItem1 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+
+#navItem2 {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+}
+body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 120px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .btn:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://res.cloudinary.com/djqs7park/image/upload/v1696758497/logo_q6hmbl.jpg" class="food-munch-logo" />
+            </a>
+            <h1 style="font-size: 60px;font-family: 'Times New Roman', Times, serif;color: black;">Smart Canteen</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <b><a class="nav-link active" id="navItem1" href="/adminindex">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a></b>
+                    <b><a class="nav-link" href="/logout" id="navItem2">Log Out</a></b>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <table>
+        <tr>
+            <th style="text-align : center; font-family: 'Times New Roman', Times, serif;" colspan="7"><h1><b>Orders</b></h1></th>
+        </tr>
+        <tr>
+            <th>Username</th>
+            <th>Order ID</th>
+            <th>Item Name</th>
+            <th>Amount</th>
+            <th>Quantity</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+        {% if data %}
+            {% for order in data %}
+                <tr>
+                    <td>{{ order[1] }}</td>
+                    <td>{{ order[2] }}</td>
+                    <td>{{ order[3] }}</td>
+                    <td>₹{{ order[4] }}</td>
+                    <td>{{ order[6] }}</td>
+                    <td>{{ order[5] }}</td>
+                    <td>
+                        {% if order[7] != 'delivered' and order[7] != 'rejected' %}
+                        <form class="status-change-form" method="post" action="/update_status">
+                            <input type="hidden" name="order_id" value="{{ order[2] }}">
+                            <select name="new_status">
+                                <option value="" disabled selected>Select Status</option>
+                                <option value="pending">Pending</option>
+                                <option value="preparing">Preparing</option>
+                                <option value="rejected">Rejected</option>
+                                <option value="delivered">Delivered</option>
+                            </select>
+                            <button type="submit" class="btn">Change Status</button>
+                        </form>
+                        {% elif order[7] == 'rejected' %}
+                            <p style="color: red;"><b>Rejected</b></p>
+                        {% else %}
+                            <p style="color: green;"><b>Delivered</b></p>
+                    {% endif %}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7"><b>No Order Place Today</b></td>
+            </tr>
+        {% endif %}
+    </table>
+    <br><br><br>
+    <h4 style="text-align: center;"><b>Click Here To Visit <a style="text-align: center;" href="/view_all_order">  All Order</b></a></h4>
+</body>
+</html>
